@@ -1,0 +1,13 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build grayscale",
+      "type": "shell",
+      "command": "g++",
+      "args": ["-std=c++17", "main.cpp", "-o", "grayscale.exe", "-lOpenCL"],
+      "group": "build",
+      "problemMatcher": []
+    }
+  ]
+}
