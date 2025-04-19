@@ -117,7 +117,7 @@ gray = 0.299 * R + 0.587 * G + 0.114 * B;
 | **Scheduler Type**             | Static (CPU-side enqueue)                                                                  | Dynamic warp-level scheduling                                                                            |
 | **Peak Theoretical Parallelism** | ~1344 SIMD lanes                                                                           | 10,496 cores × 2 (FP32/INT32 dual-issue) = ~20,000+ threads in flight                                                                                                         |
 | **Execution Unit Details**     | 24 EUs × 7 threads/EU, SIMD16 = ~5376 parallel lanes                                       | 10,496 CUDA cores × 2 FP32 or INT32 ops = ~20,000 threads                                                |
-| **Image Processing Example**   | Processes **1920×1080 image (~2.07 million pixels)** in **15–25 ms** | Achieves **~40 to 60 images per second** with optimized pipeline |
+| **Image Processing Example**   | ~40–66 images/sec (1920×1080) in 15–25 ms each (optimized OpenCL pipeline)                | ~200–1000 images/sec (1920×1080) in 1–5 ms each (optimized CUDA pipeline)                               |
 
 ----------
 
